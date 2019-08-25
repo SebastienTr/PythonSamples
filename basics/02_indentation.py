@@ -1,8 +1,10 @@
 #! /usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-mavariable = True
+my_variable = True
 
-if mavariable is True:
-	for i in range(0, 1):
+# We don't have to use { } even ( ), the indentation is enough
+
+if my_variable is True:
+	for i in range(0, 2):
 		print ("Hello World")

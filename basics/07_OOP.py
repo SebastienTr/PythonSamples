@@ -4,27 +4,22 @@
 class You():
 	"""This is you"""
 	def __init__(self, name="", age=0):
-		self.name = name # This line will call the name setter method which will set _name
-		self.age = age; # This one will call the age setter method which will set _age
+		self._name = name # This line will call the name setter method which will set _name
+		self._age = age; # This one will call the age setter method which will set _age
 
-	
-	@property # This is a getter
-	def name(self):
+	def _getName(self):
 		print ("get name")
 		return self._name
 
-	@name.setter # This is a setter
-	def name(self, value):
+	def _setName(self, value):
 		print ("set name")
 		self._name = value.capitalize()
 
-	@property # Beautiful
-	def age(self):
+	def _getAge(self):
 		print ("get age")
 		return self._age
 
-	@age.setter # Isn't it ?
-	def age(self, value):
+	def _setAge(self, value):
 		print ("set age")
 		if value < 0:
 			self._age = 0
@@ -33,6 +28,9 @@ class You():
 			self._age = 100
 		else:
 			self._age = value
+
+	name = property(_getName, _setName, None, 'I am the name')
+	age = property(_getAge, _setAge, None, 'I am the age')
 
 	def __str__(self):
 		return "Your name is {} and you're {} years old".format(self.name, self.age)

@@ -3,6 +3,8 @@
 
 theAnswer = 42
 
+# Look at the differents condition structures
+
 if theAnswer >= 0:
 	print ("the", end=" ")
 elif theAnswer < 42:

@@ -1,5 +1,6 @@
 #! /usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-print ("Hello toto !")
+print ("Hello World !")
 
+# Simple, isn't it ?
